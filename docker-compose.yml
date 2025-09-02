@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  ikuai-komari-agent:
+    build: .
+    container_name: ikuai-komari-agent
+    volumes:
+      - ./logs:/app/logs
+      - ./config.py:/app/config.py
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - ikuai-network
+
+networks:
+  ikuai-network:
+    driver: bridge
