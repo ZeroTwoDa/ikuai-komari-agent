@@ -16,7 +16,28 @@
 
 ## 🚀 快速开始
 
-### 安装文档
+### Docker部署（推荐）
+
+**环境要求**: Docker + Docker Compose
+
+```bash
+# 1. 克隆项目
+git clone https://github.com/ZeroTwoDa/ikuai-komari-agent.git
+cd ikuai-komari-agent
+
+# 2. 配置参数（编辑config.py文件）
+nano config.py
+
+# 3. 启动服务
+docker-compose up -d
+
+# 4. 查看日志
+docker-compose logs -f ikuai-komari-agent
+```
+
+详细Docker部署文档：[README_DOCKER.md](README_DOCKER.md)
+
+### 传统部署方式
 
 [安装文档](https://github.com/ZeroTwoDa/ikuai-komari-agent/blob/main/Install.md)
 
